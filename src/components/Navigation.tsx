@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
@@ -44,7 +45,9 @@ export default function Navigation() {
                 whileHover={{ scale: 1.05 }}
                 className="h-12 w-auto"
               >
-                <img src="/images/logo.png" alt="Alie Web3 Agency" className="h-full w-auto" />
+                <div className="h-12 w-32 bg-gradient-to-r from-signal-gold to-data-blue rounded flex items-center justify-center">
+                  <span className="font-satoshi font-black text-void-black text-xl">ALIE</span>
+                </div>
               </motion.div>
             </Link>
 

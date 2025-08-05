@@ -33,7 +33,7 @@ export default function PartnersSection() {
           transition={{ duration: 0.6 }}
           className="text-2xl md:text-3xl font-satoshi font-bold text-center text-quantum-white mb-12"
         >
-          Trusted By The Industry's Best
+          Trusted By The Industry&apos;s Best
         </motion.h2>
       </div>
 

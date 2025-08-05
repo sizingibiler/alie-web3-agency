@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Twitter, Linkedin, Send, Mail, Link as LinkIcon } from 'lucide-react'
+import { Twitter, Send, Mail, Link as LinkIcon } from 'lucide-react'
 
 const footerLinks = {
   services: [
@@ -42,7 +42,7 @@ export default function Footer() {
               Ready to build?
             </h2>
             <p className="text-xl text-neutral-gray mb-8">
-              Let's architect your Web3 success story together. 
+              Let&apos;s architect your Web3 success story together. 
               Book a call with our growth experts today.
             </p>
             <motion.div

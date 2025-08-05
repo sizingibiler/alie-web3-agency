@@ -3,7 +3,6 @@
 import { Canvas } from '@react-three/fiber'
 import { Float, Environment, Sparkles } from '@react-three/drei'
 import { Suspense } from 'react'
-import * as THREE from 'three'
 
 function DataCube() {
   return (
