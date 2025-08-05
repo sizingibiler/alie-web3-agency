@@ -6,19 +6,19 @@ const teamMembers = [
   {
     name: 'Hamza Aktan',
     title: 'Founder',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
+    image: '/images/team/hamza-aktan.jpg',
     linkedin: 'https://www.linkedin.com/in/hamza-aktan-0274a8378/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
   },
   {
     name: 'Berkay Kaya',
     title: 'Founder',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
+    image: '/images/team/berkay-kaya.jpg',
     linkedin: 'https://www.linkedin.com/in/berkay-kaya-525511378'
   },
   {
     name: 'Ziya Eyüboğlu',
     title: 'Founder',
-    image: 'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=400&h=400&fit=crop&crop=face',
+    image: '/images/team/ziya-eyuboglu.jpg',
     linkedin: 'https://www.linkedin.com/in/ziya-ey%C3%BCbo%C4%9Flu-1a0baa235?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
   }
 ]

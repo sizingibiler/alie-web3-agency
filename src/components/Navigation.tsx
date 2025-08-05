@@ -44,9 +44,11 @@ export default function Navigation() {
                 whileHover={{ scale: 1.05 }}
                 className="h-12 w-auto"
               >
-                <div className="h-12 w-32 bg-gradient-to-r from-signal-gold to-data-blue rounded flex items-center justify-center">
-                  <span className="font-satoshi font-black text-void-black text-xl">ALIE</span>
-                </div>
+                <img 
+                  src="/images/logo.png" 
+                  alt="Alie Web3 Agency" 
+                  className="h-12 w-auto object-contain"
+                />
               </motion.div>
             </Link>
 
