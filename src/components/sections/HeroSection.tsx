@@ -30,7 +30,7 @@ export default function HeroSection() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: 'easeOut'
+        ease: [0.6, -0.05, 0.01, 0.99] as const
       }
     }
   }
