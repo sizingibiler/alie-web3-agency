@@ -1,4 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alie Web3 Agency
+
+Modern Web3 Agency Website built with Next.js, TypeScript, Tailwind CSS, and Three.js.
+
+## 🚀 Features
+
+- **Next.js 15** with App Router
+- **TypeScript** for type safety
+- **Tailwind CSS** for styling
+- **Three.js & React Three Fiber** for 3D graphics
+- **Framer Motion** for animations
+- **Next-intl** for internationalization
+- **Responsive Design** for all devices
+
+## 🛠️ Tech Stack
+
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS
+- Three.js
+- Framer Motion
+- Lucide React Icons
 
 ## Getting Started
 
