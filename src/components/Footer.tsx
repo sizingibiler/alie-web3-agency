@@ -70,7 +70,7 @@ export default function Footer() {
             <div className="space-y-4">
               <Link href="/" className="inline-block">
                 <span className="font-satoshi font-black text-2xl text-quantum-white">
-                  ALIE
+                  ALIE NETWORK
                 </span>
               </Link>
               <p className="text-neutral-gray">
@@ -96,7 +96,9 @@ export default function Footer() {
                   <LinkIcon className="w-5 h-5" />
                 </motion.a>
                 <motion.a
-                  href="#"
+                  href="https://t.me/alienetwork"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
                   className="w-10 h-10 rounded-full bg-neutral-gray/10 flex items-center justify-center text-neutral-gray hover:bg-signal-gold hover:text-void-black transition-all duration-200"
                 >
