@@ -64,7 +64,11 @@ export default function SolutionsSection() {
             className="w-full h-full"
             viewBox="0 0 100 100"
             preserveAspectRatio="xMidYMid meet"
+            role="img"
+            aria-labelledby="ecosystem-title ecosystem-desc"
           >
+            <title id="ecosystem-title">Alie Ecosystem Diagram</title>
+            <desc id="ecosystem-desc">Interactive diagram showing Alie Growth Engine at center with connected services including Token Growth, Community Gathering, and other Web3 services. The center features the Alie logo.</desc>
             {/* Logo Pattern Definition */}
             <defs>
               <pattern
@@ -81,7 +85,6 @@ export default function SolutionsSection() {
                   width="0.8"
                   height="0.8"
                   preserveAspectRatio="xMidYMid meet"
-                  alt="Alie Logo"
                   onError={() => {
                     console.warn('Alie logo failed to load, falling back to solid color')
                     setLogoLoaded(false)
