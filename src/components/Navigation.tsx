@@ -46,7 +46,7 @@ export default function Navigation() {
                 className="h-12 w-auto"
               >
                 <Image 
-                  src="/images/logo.png" 
+                  src="/logo-new.png" 
                   alt="Alie Network" 
                   width={48}
                   height={48}

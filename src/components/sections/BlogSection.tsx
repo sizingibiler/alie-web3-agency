@@ -61,7 +61,7 @@ export default function BlogSection() {
               transition: { staggerChildren: 0.1 }
             }
           }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch"
         >
           {blogPosts.map((post, index) => (
             <motion.article
@@ -73,7 +73,7 @@ export default function BlogSection() {
               whileHover={{ y: -8 }}
               className="group cursor-pointer"
             >
-              <div className="relative overflow-hidden rounded-2xl bg-void-black border border-neutral-gray/20 hover:border-tiffany-blue/50 transition-all duration-300">
+              <div className="relative overflow-hidden rounded-2xl bg-void-black border border-neutral-gray/20 hover:border-tiffany-blue/50 transition-all duration-300 h-full flex flex-col">
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden">
                   <Image
@@ -92,12 +92,12 @@ export default function BlogSection() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
+                <div className="p-6 flex-1 flex flex-col">
                   <h3 className="text-xl font-satoshi font-bold text-quantum-white mb-3 line-clamp-2 group-hover:text-tiffany-blue transition-colors">
                     {post.title}
                   </h3>
                   
-                  <p className="text-neutral-gray mb-4 line-clamp-3">
+                  <p className="text-neutral-gray mb-4 line-clamp-3 flex-1">
                     {post.excerpt}
                   </p>
 
