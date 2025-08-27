@@ -147,7 +147,7 @@ export default function ServicesSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto items-stretch"
         >
           {services.map((service, index) => (
             <motion.div
@@ -159,7 +159,7 @@ export default function ServicesSection() {
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-signal-gold/20 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500" />
               
-              <div className={`relative p-8 rounded-3xl border ${service.borderColor} bg-gradient-to-br from-void-black/90 via-void-black/80 to-neutral-gray/5 backdrop-blur-xl transition-all duration-300 overflow-hidden`}>
+              <div className={`relative p-8 rounded-3xl border ${service.borderColor} bg-gradient-to-br from-void-black/90 via-void-black/80 to-neutral-gray/5 backdrop-blur-xl transition-all duration-300 overflow-hidden h-full flex flex-col`}>
                 {/* Background Pattern */}
                 <div className="absolute top-0 right-0 w-48 h-48 opacity-5">
                   <div className="absolute inset-0 rotate-45 transform" style={{
@@ -178,7 +178,7 @@ export default function ServicesSection() {
                 </div>
 
                 {/* Service Items */}
-                <div className="space-y-5">
+                <div className="space-y-5 flex-1">
                   {service.items.map((item, itemIndex) => (
                     <motion.div 
                       key={itemIndex} 
