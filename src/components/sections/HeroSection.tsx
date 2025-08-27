@@ -2,21 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import dynamic from 'next/dynamic'
-
-const Hero3DBackground = dynamic(() => import('../ui/Hero3DBackground'), { 
-  ssr: false,
-  loading: () => (
-    <div className="absolute inset-0 bg-gradient-to-br from-void-black to-neutral-gray/10">
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, #FFB600 0%, transparent 50%),
-                            radial-gradient(circle at 75% 75%, #009EFF 0%, transparent 50%)`
-        }} />
-      </div>
-    </div>
-  )
-})
+import VideoBackground from '../ui/VideoBackground'
 
 export default function HeroSection() {
   const words = ['Web3', 'Growth,', 'Delivered.']
@@ -45,17 +31,17 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* 3D Background */}
-      <Hero3DBackground />
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Video Background */}
+      <VideoBackground />
       
       {/* Content */}
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="max-w-4xl"
+          className="max-w-2xl"
         >
           {/* Main Heading */}
           <motion.h1 className="font-satoshi font-black text-6xl md:text-7xl lg:text-8xl tracking-tight">
@@ -115,6 +101,9 @@ export default function HeroSection() {
             </motion.div>
           </motion.div>
         </motion.div>
+        
+        {/* Video space - handled by VideoBackground */}
+        <div className="hidden lg:block"></div>
       </div>
 
       {/* Scroll Indicator */}
