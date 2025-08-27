@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const nodes = [
   { id: 'center', label: 'Alie Growth Engine', x: 50, y: 50, size: 'large' },
@@ -27,6 +27,18 @@ const connections = [
 
 export default function SolutionsSection() {
   const [hoveredNode, setHoveredNode] = useState<string | null>(null)
+  const [logoLoaded, setLogoLoaded] = useState<boolean>(true)
+
+  // Preload logo for better performance
+  useEffect(() => {
+    const img = new Image()
+    img.src = '/logo-192.png'
+    img.onload = () => setLogoLoaded(true)
+    img.onerror = () => {
+      console.warn('Failed to preload Alie logo')
+      setLogoLoaded(false)
+    }
+  }, [])
 
   return (
     <section className="py-32 relative overflow-hidden">
@@ -53,6 +65,32 @@ export default function SolutionsSection() {
             viewBox="0 0 100 100"
             preserveAspectRatio="xMidYMid meet"
           >
+            {/* Logo Pattern Definition */}
+            <defs>
+              <pattern
+                id="centerLogo"
+                patternUnits="objectBoundingBox"
+                width="1"
+                height="1"
+                patternContentUnits="objectBoundingBox"
+              >
+                <image
+                  href="/logo-192.png"
+                  x="0.1"
+                  y="0.1"
+                  width="0.8"
+                  height="0.8"
+                  preserveAspectRatio="xMidYMid meet"
+                  alt="Alie Logo"
+                  onError={() => {
+                    console.warn('Alie logo failed to load, falling back to solid color')
+                    setLogoLoaded(false)
+                  }}
+                  onLoad={() => setLogoLoaded(true)}
+                />
+              </pattern>
+            </defs>
+            
             {/* Connections */}
             {connections.map((connection, index) => {
               const fromNode = nodes.find(n => n.id === connection.from)
@@ -91,12 +129,15 @@ export default function SolutionsSection() {
                   onMouseEnter={() => setHoveredNode(node.id)}
                   onMouseLeave={() => setHoveredNode(null)}
                   className="cursor-pointer"
+                  role={isCenter ? "img" : "button"}
+                  aria-label={isCenter ? `${node.label} - Alie Logo at center of ecosystem` : node.label}
+                  tabIndex={0}
                 >
                   <motion.circle
                     cx={node.x}
                     cy={node.y}
                     r={isCenter ? 8 : 5}
-                    fill={isCenter ? '#FFB600' : '#009EFF'}
+                    fill={isCenter ? (logoLoaded ? 'url(#centerLogo)' : '#FFB600') : '#009EFF'}
                     stroke={isHovered || isConnected ? '#FFB600' : '#CCCCCC'}
                     strokeWidth={2}
                     initial={{ scale: 0 }}
@@ -107,6 +148,12 @@ export default function SolutionsSection() {
                     transition={{ 
                       scale: { duration: 0.6, delay: index * 0.1 },
                       opacity: { duration: 0.2 }
+                    }}
+                    style={{
+                      // Ensure pattern scales with animations
+                      transformOrigin: 'center',
+                      // Fallback for when pattern doesn't load
+                      backgroundColor: isCenter ? '#FFB600' : undefined
                     }}
                   />
                   
