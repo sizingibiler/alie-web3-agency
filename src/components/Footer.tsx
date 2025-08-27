@@ -96,7 +96,7 @@ export default function Footer() {
                   <LinkIcon className="w-5 h-5" />
                 </motion.a>
                 <motion.a
-                  href="https://t.me/alienetwork"
+                  href="https://t.me/alieweb3"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
@@ -162,13 +162,13 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://t.me/alienetwork"
+                    href="https://t.me/alieweb3"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-neutral-gray hover:text-quantum-white transition-colors duration-200"
                   >
                     <Send className="w-4 h-4" />
-                    @alienetwork
+                    @alieweb3
                   </a>
                 </li>
               </ul>

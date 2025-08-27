@@ -1,25 +1,29 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { Send } from 'lucide-react'
 
 const teamMembers = [
   {
     name: 'Hamza Aktan',
     title: 'Founder',
     image: '/images/team/hamza-aktan.jpg',
-    linkedin: 'https://www.linkedin.com/in/hamza-aktan-0274a8378/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
+    linkedin: 'https://www.linkedin.com/in/hamza-aktan-0274a8378/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+    telegram: 'https://t.me/D0v1D0f'
   },
   {
     name: 'Berkay Kaya',
     title: 'Founder',
     image: '/images/team/berkay-kaya.jpg',
-    linkedin: 'https://www.linkedin.com/in/berkay-kaya-525511378'
+    linkedin: 'https://www.linkedin.com/in/berkay-kaya-525511378',
+    telegram: 'https://t.me/alieweb3'
   },
   {
     name: 'Ziya Eyüboğlu',
     title: 'Founder',
     image: '/images/team/ziya-eyuboglu.jpg',
-    linkedin: 'https://www.linkedin.com/in/ziya-ey%C3%BCbo%C4%9Flu-1a0baa235?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+    linkedin: 'https://www.linkedin.com/in/ziya-ey%C3%BCbo%C4%9Flu-1a0baa235?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    telegram: 'https://t.me/ziyaeyuboglu'
   }
 ]
 
@@ -70,20 +74,29 @@ export default function TeamSection() {
               <p className="text-neutral-gray mb-4">
                 {member.title}
               </p>
-              {member.linkedin ? (
-                <a
-                  href={member.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-signal-gold/70 hover:text-signal-gold transition-colors duration-200"
-                >
-                  LinkedIn
-                </a>
-              ) : (
-                <span className="text-neutral-gray/50">
-                  -
-                </span>
-              )}
+              <div className="flex gap-4">
+                {member.linkedin && (
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-signal-gold/70 hover:text-signal-gold transition-colors duration-200"
+                  >
+                    LinkedIn
+                  </a>
+                )}
+                {member.telegram && (
+                  <a
+                    href={member.telegram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-signal-gold/70 hover:text-signal-gold transition-colors duration-200"
+                  >
+                    <Send className="w-4 h-4" />
+                    Telegram
+                  </a>
+                )}
+              </div>
             </motion.div>
           ))}
         </motion.div>
