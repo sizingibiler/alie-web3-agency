@@ -16,7 +16,7 @@ export default function VideoBackground() {
       {/* Video Container - Right side */}
       <div className="relative">
         {/* Circular video container */}
-        <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-signal-gold/30 shadow-2xl">
+        <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white/30 shadow-2xl">
           <video
             ref={videoRef}
             className="w-full h-full object-cover"
@@ -30,13 +30,6 @@ export default function VideoBackground() {
             Your browser does not support the video tag.
           </video>
         </div>
-        
-        {/* Glow effect */}
-        <div className="absolute inset-0 w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-signal-gold/20 blur-xl animate-pulse" />
-        
-        {/* Rotating border */}
-        <div className="absolute inset-0 w-80 h-80 lg:w-96 lg:h-96 rounded-full border-2 border-transparent bg-gradient-to-r from-signal-gold via-transparent to-signal-gold animate-spin" 
-             style={{ animationDuration: '8s' }} />
       </div>
       
       {/* Background gradient overlay */}
