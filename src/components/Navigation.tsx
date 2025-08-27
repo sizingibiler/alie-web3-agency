@@ -70,7 +70,7 @@ export default function Navigation() {
                 >
                   {link.label}
                   <motion.span
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-signal-gold origin-center"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-tiffany-blue origin-center"
                     initial={{ scaleX: 0 }}
                     whileHover={{ scaleX: 1 }}
                     transition={{ duration: 0.2 }}
@@ -87,7 +87,7 @@ export default function Navigation() {
                   href="https://linktr.ee/alienetwork"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3 bg-signal-gold text-void-black font-semibold rounded-full hover:glow-gold transition-all duration-200"
+                  className="px-6 py-3 bg-tiffany-blue text-void-black font-semibold rounded-full hover:glow transition-all duration-200"
                 >
                   Get Started
                 </a>
@@ -153,7 +153,7 @@ export default function Navigation() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsMenuOpen(false)}
-                  className="inline-block px-6 py-3 bg-signal-gold text-void-black font-semibold rounded-full text-center mt-4"
+                  className="inline-block px-6 py-3 bg-tiffany-blue text-void-black font-semibold rounded-full text-center mt-4"
                 >
                   Get Started
                 </a>

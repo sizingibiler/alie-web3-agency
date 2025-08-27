@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         'void-black': '#0D0D0D',
         'signal-gold': '#FFB600',
+        'tiffany-blue': '#0ABAB5',
         'data-blue': '#009EFF',
         'quantum-white': '#F5F5F5',
         'neutral-gray': '#CCCCCC',
@@ -36,8 +37,8 @@ const config: Config = {
           '50%': { transform: 'translateY(-20px)' },
         },
         glow: {
-          '0%, 100%': { boxShadow: '0 0 15px rgba(255, 182, 0, 0.4)' },
-          '50%': { boxShadow: '0 0 25px rgba(255, 182, 0, 0.6)' },
+          '0%, 100%': { boxShadow: '0 0 15px rgba(10, 186, 181, 0.4)' },
+          '50%': { boxShadow: '0 0 25px rgba(10, 186, 181, 0.6)' },
         },
         slideInUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },

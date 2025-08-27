@@ -55,13 +55,13 @@ export default function TeamSection() {
           {teamMembers.map((member, index) => (
             <motion.div
               key={index}
-              className="group flex flex-col items-center bg-void-black p-6 rounded-lg border border-neutral-gray/20 hover:border-signal-gold/50 transition-all duration-300"
+              className="group flex flex-col items-center bg-void-black p-6 rounded-lg border border-neutral-gray/20 hover:border-tiffany-blue/50 transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <motion.div className="relative w-36 h-36 mb-4 overflow-hidden rounded-full border-4 border-signal-gold">
+              <motion.div className="relative w-36 h-36 mb-4 overflow-hidden rounded-full border-4 border-tiffany-blue">
                 <motion.img
                   src={member.image}
                   alt={member.name}
@@ -80,7 +80,7 @@ export default function TeamSection() {
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-signal-gold/70 hover:text-signal-gold transition-colors duration-200"
+                    className="text-tiffany-blue/70 hover:text-tiffany-blue transition-colors duration-200"
                   >
                     LinkedIn
                   </a>
@@ -90,7 +90,7 @@ export default function TeamSection() {
                     href={member.telegram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-signal-gold/70 hover:text-signal-gold transition-colors duration-200"
+                    className="flex items-center gap-1 text-tiffany-blue/70 hover:text-tiffany-blue transition-colors duration-200"
                   >
                     <Send className="w-4 h-4" />
                     Telegram

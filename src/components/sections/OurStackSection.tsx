@@ -96,14 +96,14 @@ export default function OurStackSection() {
               key={index}
               variants={itemVariants}
               whileHover={{ y: -8 }}
-              className="group relative p-8 rounded-2xl bg-void-black border border-neutral-gray/20 hover:border-signal-gold/50 transition-all duration-300"
+              className="group relative p-8 rounded-2xl bg-void-black border border-neutral-gray/20 hover:border-tiffany-blue/50 transition-all duration-300"
             >
               {/* Glow effect on hover */}
-              <div className="absolute inset-0 rounded-2xl bg-signal-gold/10 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300" />
+              <div className="absolute inset-0 rounded-2xl bg-tiffany-blue/10 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300" />
               
               <div className="relative">
                 {/* Icon */}
-                <div className="mb-6 inline-flex p-3 rounded-xl bg-signal-gold/10 text-signal-gold group-hover:bg-signal-gold/20 transition-colors duration-300">
+                <div className="mb-6 inline-flex p-3 rounded-xl bg-tiffany-blue/10 text-tiffany-blue group-hover:bg-tiffany-blue/20 transition-colors duration-300">
                   <service.icon className="w-6 h-6" />
                 </div>
 

@@ -59,14 +59,14 @@ export default function CaseStudiesSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group relative overflow-hidden"
             >
-              <div className="relative p-8 lg:p-12 rounded-2xl bg-void-black border border-neutral-gray/20 hover:border-signal-gold/50 transition-all duration-300">
+              <div className="relative p-8 lg:p-12 rounded-2xl bg-void-black border border-neutral-gray/20 hover:border-tiffany-blue/50 transition-all duration-300">
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                   {/* Left side - Project info */}
                   <div>
                     <h3 className="text-3xl lg:text-4xl font-satoshi font-black text-quantum-white mb-4">
                       {study.project}
                     </h3>
-                    <p className="text-4xl lg:text-5xl font-satoshi font-black text-signal-gold mb-6">
+                    <p className="text-4xl lg:text-5xl font-satoshi font-black text-tiffany-blue mb-6">
                       {study.metric}
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -88,7 +88,7 @@ export default function CaseStudiesSection() {
                     </p>
                     <motion.a
                       href="#"
-                      className="inline-flex items-center gap-2 text-signal-gold font-semibold group/link"
+                      className="inline-flex items-center gap-2 text-tiffany-blue font-semibold group/link"
                       whileHover={{ x: 5 }}
                     >
                       Read Case Study
@@ -98,7 +98,7 @@ export default function CaseStudiesSection() {
                 </div>
 
                 {/* Background decoration */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-signal-gold/5 rounded-full blur-3xl group-hover:bg-signal-gold/10 transition-colors duration-500" />
+                <div className="absolute top-0 right-0 w-64 h-64 bg-tiffany-blue/5 rounded-full blur-3xl group-hover:bg-tiffany-blue/10 transition-colors duration-500" />
               </div>
             </motion.div>
           ))}

@@ -51,7 +51,7 @@ export default function HeroSection() {
                 variants={wordVariants}
                 className={cn(
                   'inline-block mr-4',
-                  word === 'Delivered.' ? 'text-signal-gold' : 'text-quantum-white'
+                  word === 'Delivered.' ? 'text-tiffany-blue' : 'text-quantum-white'
                 )}
               >
                 {word}
@@ -82,7 +82,7 @@ export default function HeroSection() {
                 href="https://linktr.ee/alienetwork"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-8 py-4 bg-signal-gold text-void-black font-semibold rounded-full hover:glow-gold transition-all duration-200"
+                className="inline-block px-8 py-4 bg-tiffany-blue text-void-black font-semibold rounded-full hover:glow transition-all duration-200"
               >
                 Book a Call
               </a>
@@ -121,7 +121,7 @@ export default function HeroSection() {
           <motion.div
             animate={{ y: [0, 16, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-1 h-3 bg-signal-gold rounded-full mt-2"
+            className="w-1 h-3 bg-tiffany-blue rounded-full mt-2"
           />
         </motion.div>
       </motion.div>

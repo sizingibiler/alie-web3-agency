@@ -73,7 +73,7 @@ export default function BlogSection() {
               whileHover={{ y: -8 }}
               className="group cursor-pointer"
             >
-              <div className="relative overflow-hidden rounded-2xl bg-void-black border border-neutral-gray/20 hover:border-signal-gold/50 transition-all duration-300">
+              <div className="relative overflow-hidden rounded-2xl bg-void-black border border-neutral-gray/20 hover:border-tiffany-blue/50 transition-all duration-300">
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden">
                   <Image
@@ -86,14 +86,14 @@ export default function BlogSection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-void-black/80 to-transparent" />
                   
                   {/* Category badge */}
-                  <span className="absolute top-4 left-4 px-3 py-1 text-xs font-inter font-semibold text-void-black bg-signal-gold rounded-full">
+                  <span className="absolute top-4 left-4 px-3 py-1 text-xs font-inter font-semibold text-void-black bg-tiffany-blue rounded-full">
                     {post.category}
                   </span>
                 </div>
 
                 {/* Content */}
                 <div className="p-6">
-                  <h3 className="text-xl font-satoshi font-bold text-quantum-white mb-3 line-clamp-2 group-hover:text-signal-gold transition-colors">
+                  <h3 className="text-xl font-satoshi font-bold text-quantum-white mb-3 line-clamp-2 group-hover:text-tiffany-blue transition-colors">
                     {post.title}
                   </h3>
                   
@@ -118,7 +118,7 @@ export default function BlogSection() {
                       className="opacity-0 group-hover:opacity-100 transition-opacity"
                       whileHover={{ scale: 1.1 }}
                     >
-                      <ArrowUpRight className="w-4 h-4 text-signal-gold" />
+                      <ArrowUpRight className="w-4 h-4 text-tiffany-blue" />
                     </motion.div>
                   </div>
                 </div>

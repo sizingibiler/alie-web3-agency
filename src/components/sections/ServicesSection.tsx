@@ -135,7 +135,7 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            SERVICES OF <span className="text-signal-gold">ALIE NETWORK</span>
+            SERVICES OF <span className="text-tiffany-blue">ALIE NETWORK</span>
           </motion.h2>
           <p className="text-xl text-neutral-gray/80 max-w-3xl mx-auto leading-relaxed">
             Comprehensive Web3 growth solutions tailored to elevate your project to the next level
@@ -157,7 +157,7 @@ export default function ServicesSection() {
               className="group relative"
             >
               {/* Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-signal-gold/20 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-tiffany-blue/20 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500" />
               
               <div className={`relative p-8 rounded-3xl border ${service.borderColor} bg-gradient-to-br from-void-black/90 via-void-black/80 to-neutral-gray/5 backdrop-blur-xl transition-all duration-300 overflow-hidden h-full flex flex-col`}>
                 {/* Background Pattern */}
@@ -182,12 +182,12 @@ export default function ServicesSection() {
                   {service.items.map((item, itemIndex) => (
                     <motion.div 
                       key={itemIndex} 
-                      className="group/item relative pl-4 border-l-2 border-neutral-gray/20 hover:border-signal-gold/50 transition-all duration-300"
+                      className="group/item relative pl-4 border-l-2 border-neutral-gray/20 hover:border-tiffany-blue/50 transition-all duration-300"
                       whileHover={{ x: 5 }}
                     >
-                      <h4 className="text-lg font-bold text-signal-gold mb-2 flex items-center gap-2">
+                      <h4 className="text-lg font-bold text-tiffany-blue mb-2 flex items-center gap-2">
                         {item.highlight && (
-                          <span className="inline-block w-2 h-2 bg-signal-gold rounded-full animate-pulse" />
+                          <span className="inline-block w-2 h-2 bg-tiffany-blue rounded-full animate-pulse" />
                         )}
                         {item.name}
                       </h4>
@@ -215,12 +215,12 @@ export default function ServicesSection() {
             whileTap={{ scale: 0.95 }}
             className="relative inline-block group"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-signal-gold to-orange-500 rounded-full blur-lg opacity-75 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-gradient-to-r from-tiffany-blue to-orange-500 rounded-full blur-lg opacity-75 group-hover:opacity-100 transition-opacity duration-300" />
             <a
               href="https://linktr.ee/alienetwork"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative inline-block px-10 py-5 bg-gradient-to-r from-signal-gold to-orange-500 text-void-black font-bold text-lg rounded-full hover:shadow-2xl transition-all duration-300 uppercase tracking-wide"
+              className="relative inline-block px-10 py-5 bg-gradient-to-r from-tiffany-blue to-orange-500 text-void-black font-bold text-lg rounded-full hover:shadow-2xl transition-all duration-300 uppercase tracking-wide"
             >
               Explore Our Services
             </a>

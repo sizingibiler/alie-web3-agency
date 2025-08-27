@@ -53,7 +53,7 @@ export default function Footer() {
                 href="https://linktr.ee/alienetwork"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-8 py-4 bg-signal-gold text-void-black font-semibold rounded-full hover:glow-gold transition-all duration-200"
+                className="inline-block px-8 py-4 bg-tiffany-blue text-void-black font-semibold rounded-full hover:glow transition-all duration-200"
               >
                 Book a Call
               </a>
@@ -82,7 +82,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
-                  className="w-10 h-10 rounded-full bg-neutral-gray/10 flex items-center justify-center text-neutral-gray hover:bg-signal-gold hover:text-void-black transition-all duration-200"
+                  className="w-10 h-10 rounded-full bg-neutral-gray/10 flex items-center justify-center text-neutral-gray hover:bg-tiffany-blue hover:text-void-black transition-all duration-200"
                 >
                   <Twitter className="w-5 h-5" />
                 </motion.a>
@@ -91,7 +91,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
-                  className="w-10 h-10 rounded-full bg-neutral-gray/10 flex items-center justify-center text-neutral-gray hover:bg-signal-gold hover:text-void-black transition-all duration-200"
+                  className="w-10 h-10 rounded-full bg-neutral-gray/10 flex items-center justify-center text-neutral-gray hover:bg-tiffany-blue hover:text-void-black transition-all duration-200"
                 >
                   <LinkIcon className="w-5 h-5" />
                 </motion.a>
@@ -100,7 +100,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
-                  className="w-10 h-10 rounded-full bg-neutral-gray/10 flex items-center justify-center text-neutral-gray hover:bg-signal-gold hover:text-void-black transition-all duration-200"
+                  className="w-10 h-10 rounded-full bg-neutral-gray/10 flex items-center justify-center text-neutral-gray hover:bg-tiffany-blue hover:text-void-black transition-all duration-200"
                 >
                   <Send className="w-5 h-5" />
                 </motion.a>
