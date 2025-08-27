@@ -65,8 +65,7 @@ export default function HeroSection() {
             variants={wordVariants}
             className="mt-6 text-lg sm:text-xl text-neutral-gray max-w-2xl font-inter leading-relaxed"
           >
-            <span className="hidden sm:inline">From data-driven KOL campaigns to angel investor matchmaking, we architect success for the most ambitious projects in Web3.</span>
-            <span className="sm:hidden">Veri odaklı KOL kampanyalarından melek yatırımcı eşleştirmelerine kadar, Web3'teki en iddialı projeler için başarıyı mimarlıyoruz.</span>
+            From data-driven KOL campaigns to angel investor matchmaking, we architect success for the most ambitious projects in Web3.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -84,8 +83,7 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 className="inline-block w-full sm:w-auto text-center px-6 sm:px-8 py-3 sm:py-4 bg-tiffany-blue text-void-black font-semibold rounded-full hover:glow transition-all duration-200"
               >
-                <span className="hidden sm:inline">Book a Call</span>
-                <span className="sm:hidden">Bir Arama Planlayın</span>
+                Book a Call
               </a>
             </motion.div>
             
@@ -97,8 +95,7 @@ export default function HeroSection() {
                 href="#services"
                 className="inline-block w-full sm:w-auto text-center px-6 sm:px-8 py-3 sm:py-4 border border-neutral-gray text-quantum-white font-semibold rounded-full hover:bg-neutral-gray/10 transition-all duration-200"
               >
-                <span className="hidden sm:inline">Explore Services</span>
-                <span className="sm:hidden">Hizmetleri Keşfet</span>
+                Explore Services
               </Link>
             </motion.div>
           </motion.div>
