@@ -36,7 +36,7 @@ export default function HeroSection() {
       <VideoBackground />
       
       {/* Content */}
-      <div className="container mx-auto px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center pt-20 sm:pt-0">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -44,7 +44,7 @@ export default function HeroSection() {
           className="max-w-2xl"
         >
           {/* Main Heading */}
-          <motion.h1 className="font-satoshi font-black text-6xl md:text-7xl lg:text-8xl tracking-tight">
+          <motion.h1 className="font-satoshi font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight leading-tight">
             {words.map((word, index) => (
               <motion.span
                 key={index}
@@ -63,16 +63,16 @@ export default function HeroSection() {
           {/* Subtitle */}
           <motion.p
             variants={wordVariants}
-            className="mt-8 text-xl text-neutral-gray max-w-2xl font-inter leading-relaxed"
+            className="mt-6 text-lg sm:text-xl text-neutral-gray max-w-2xl font-inter leading-relaxed"
           >
-            From data-driven KOL campaigns to angel investor matchmaking, 
-            we architect success for the most ambitious projects in Web3.
+            <span className="hidden sm:inline">From data-driven KOL campaigns to angel investor matchmaking, we architect success for the most ambitious projects in Web3.</span>
+            <span className="sm:hidden">Veri odaklı KOL kampanyalarından melek yatırımcı eşleştirmelerine kadar, Web3'teki en iddialı projeler için başarıyı mimarlıyoruz.</span>
           </motion.p>
 
           {/* CTA Buttons */}
           <motion.div
             variants={wordVariants}
-            className="mt-12 flex flex-col sm:flex-row gap-4"
+            className="mt-8 sm:mt-12 flex flex-col sm:flex-row gap-4"
           >
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -82,9 +82,10 @@ export default function HeroSection() {
                 href="https://linktr.ee/alienetwork"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-8 py-4 bg-tiffany-blue text-void-black font-semibold rounded-full hover:glow transition-all duration-200"
+                className="inline-block w-full sm:w-auto text-center px-6 sm:px-8 py-3 sm:py-4 bg-tiffany-blue text-void-black font-semibold rounded-full hover:glow transition-all duration-200"
               >
-                Book a Call
+                <span className="hidden sm:inline">Book a Call</span>
+                <span className="sm:hidden">Bir Arama Planlayın</span>
               </a>
             </motion.div>
             
@@ -94,9 +95,10 @@ export default function HeroSection() {
             >
               <Link
                 href="#services"
-                className="inline-block px-8 py-4 border border-neutral-gray text-quantum-white font-semibold rounded-full hover:bg-neutral-gray/10 transition-all duration-200"
+                className="inline-block w-full sm:w-auto text-center px-6 sm:px-8 py-3 sm:py-4 border border-neutral-gray text-quantum-white font-semibold rounded-full hover:bg-neutral-gray/10 transition-all duration-200"
               >
-                Explore Services
+                <span className="hidden sm:inline">Explore Services</span>
+                <span className="sm:hidden">Hizmetleri Keşfet</span>
               </Link>
             </motion.div>
           </motion.div>
