@@ -2,11 +2,8 @@
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
   "framework": "nextjs",
-  "installCommand": "npm install",
-  "devCommand": "npm run dev",
-  "regions": ["iad1"],
   "functions": {
-    "src/pages/api/**/*.ts": {
+    "app/**/*.{js,ts,jsx,tsx}": {
       "runtime": "nodejs18.x"
     }
   }
