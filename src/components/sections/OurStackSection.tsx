@@ -14,32 +14,44 @@ const services = [
   {
     icon: BarChart3,
     title: 'Data-Driven KOL Campaigns',
-    description: 'Leverage advanced analytics to identify and engage the most impactful Key Opinion Leaders for your project.'
+    description: 'Leverage advanced analytics to identify and engage the most impactful Key Opinion Leaders for your project.',
+    color: 'tiffany-blue', // Turkuaz - Data ve analitik için
+    glowColor: 'rgba(10, 186, 181, 0.1)'
   },
   {
     icon: Users,
     title: 'Bespoke KOL Campaigns',
-    description: 'Custom-tailored influencer strategies that align perfectly with your brand voice and target audience.'
+    description: 'Custom-tailored influencer strategies that align perfectly with your brand voice and target audience.',
+    color: 'signal-gold', // Altın - Premium hizmet için
+    glowColor: 'rgba(255, 182, 0, 0.1)'
   },
   {
     icon: TrendingUp,
     title: 'Exchange Listing Support',
-    description: 'Navigate the complex world of CEX and DEX listings with our proven framework and relationships.'
+    description: 'Navigate the complex world of CEX and DEX listings with our proven framework and relationships.',
+    color: 'data-blue', // Mavi - Exchange ve büyüme için
+    glowColor: 'rgba(0, 158, 255, 0.1)'
   },
   {
     icon: Handshake,
     title: 'Angel Investor Matchmaking',
-    description: 'Connect with the right investors who understand your vision and can accelerate your growth.'
+    description: 'Connect with the right investors who understand your vision and can accelerate your growth.',
+    color: 'service-pink', // Pembe - Yatırım ve ortaklık için
+    glowColor: 'rgba(194, 30, 86, 0.1)'
   },
   {
     icon: Megaphone,
     title: 'High-Impact Ad Campaigns',
-    description: 'Cut through the noise with precision-targeted advertising across Web3-native platforms.'
+    description: 'Cut through the noise with precision-targeted advertising across Web3-native platforms.',
+    color: 'service-orange', // Turuncu - Reklam ve pazarlama için
+    glowColor: 'rgba(255, 107, 53, 0.1)'
   },
   {
     icon: Link2,
     title: 'Strategic Partnerships',
-    description: 'Forge meaningful collaborations that expand your ecosystem and multiply your reach.'
+    description: 'Forge meaningful collaborations that expand your ecosystem and multiply your reach.',
+    color: 'service-purple', // Mor - Stratejik ortaklıklar için
+    glowColor: 'rgba(157, 78, 221, 0.1)'
   }
 ]
 
@@ -96,14 +108,23 @@ export default function OurStackSection() {
               key={index}
               variants={itemVariants}
               whileHover={{ y: -8 }}
-              className="group relative p-8 rounded-2xl bg-void-black border border-neutral-gray/20 hover:border-tiffany-blue/50 transition-all duration-300"
+              className={`group relative p-8 rounded-2xl bg-void-black border border-neutral-gray/20 hover:border-${service.color}/50 transition-all duration-300`}
             >
               {/* Glow effect on hover */}
-              <div className="absolute inset-0 rounded-2xl bg-tiffany-blue/10 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300" />
+              <div 
+                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300"
+                style={{ backgroundColor: service.glowColor }}
+              />
               
               <div className="relative">
                 {/* Icon */}
-                <div className="mb-6 inline-flex p-3 rounded-xl bg-tiffany-blue/10 text-tiffany-blue group-hover:bg-tiffany-blue/20 transition-colors duration-300">
+                <div 
+                  className={`mb-6 inline-flex p-3 rounded-xl text-${service.color} group-hover:bg-opacity-20 transition-colors duration-300`}
+                  style={{ 
+                    backgroundColor: service.glowColor,
+                    '--hover-bg': service.glowColor.replace('0.1', '0.2')
+                  } as React.CSSProperties}
+                >
                   <service.icon className="w-6 h-6" />
                 </div>
 

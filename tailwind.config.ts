@@ -15,6 +15,9 @@ const config: Config = {
         'data-blue': '#009EFF',
         'quantum-white': '#F5F5F5',
         'neutral-gray': '#CCCCCC',
+        'service-pink': '#C21E56',
+        'service-orange': '#FF6B35',
+        'service-purple': '#9D4EDD',
       },
       fontFamily: {
         'satoshi': ['Satoshi', 'sans-serif'],
