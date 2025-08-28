@@ -8,25 +8,33 @@ const caseStudies = [
     project: 'Polymarket',
     metric: '$1.1B Monthly Volume',
     description: 'Supported the launch and growth of the leading decentralized prediction platform, achieving 40% growth in Q2 2025.',
-    tags: ['Launch Support', 'Community Growth', 'Platform Adoption']
+    tags: ['Launch Support', 'Community Growth', 'Platform Adoption'],
+    color: 'tiffany-blue',
+    glowColor: 'rgba(10, 186, 181, 0.1)'
   },
   {
     project: 'ITALIANOBRAIN',
     metric: '$611K Market Cap',
     description: 'Provided comprehensive support for this Solana-based token, including listing advisory, community building, and organic content strategies.',
-    tags: ['Token Listing', 'Community Building', 'Content Strategy']
+    tags: ['Token Listing', 'Community Building', 'Content Strategy'],
+    color: 'signal-gold',
+    glowColor: 'rgba(255, 182, 0, 0.1)'
   },
   {
     project: 'OORT',
     metric: '+30x Token Growth on TGE',
     description: 'Achieved unprecedented growth through strategic KOL partnerships and data-driven campaigns across multiple regions.',
-    tags: ['KOL Campaign', 'Token Launch', 'Community Building']
+    tags: ['KOL Campaign', 'Token Launch', 'Community Building'],
+    color: 'service-pink',
+    glowColor: 'rgba(194, 30, 86, 0.1)'
   },
   {
     project: 'Polygon',
     metric: '1M+ New Users in 90 Days',
     description: 'Orchestrated a multi-channel growth strategy that expanded the ecosystem and attracted high-value developers.',
-    tags: ['Ecosystem Growth', 'Developer Relations', 'Strategic Partnerships']
+    tags: ['Ecosystem Growth', 'Developer Relations', 'Strategic Partnerships'],
+    color: 'service-purple',
+    glowColor: 'rgba(157, 78, 221, 0.1)'
   }
 ]
 
@@ -57,16 +65,23 @@ export default function CaseStudiesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ y: -8 }}
               className="group relative overflow-hidden"
             >
-              <div className="relative p-8 lg:p-12 rounded-2xl bg-void-black border border-neutral-gray/20 hover:border-tiffany-blue/50 transition-all duration-300">
-                <div className="grid lg:grid-cols-2 gap-8 items-center">
+              <div className={`relative p-8 lg:p-12 rounded-2xl bg-void-black border border-neutral-gray/20 hover:border-${study.color}/50 transition-all duration-300`}>
+                {/* Glow effect on hover */}
+                <div 
+                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300"
+                  style={{ backgroundColor: study.glowColor }}
+                />
+                
+                <div className="relative grid lg:grid-cols-2 gap-8 items-center">
                   {/* Left side - Project info */}
                   <div>
                     <h3 className="text-3xl lg:text-4xl font-satoshi font-black text-quantum-white mb-4">
                       {study.project}
                     </h3>
-                    <p className="text-4xl lg:text-5xl font-satoshi font-black text-tiffany-blue mb-6">
+                    <p className={`text-4xl lg:text-5xl font-satoshi font-black text-${study.color} mb-6`}>
                       {study.metric}
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -88,7 +103,7 @@ export default function CaseStudiesSection() {
                     </p>
                     <motion.a
                       href="#"
-                      className="inline-flex items-center gap-2 text-tiffany-blue font-semibold group/link"
+                      className={`inline-flex items-center gap-2 text-${study.color} font-semibold group/link`}
                       whileHover={{ x: 5 }}
                     >
                       Read Case Study
@@ -98,7 +113,13 @@ export default function CaseStudiesSection() {
                 </div>
 
                 {/* Background decoration */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-tiffany-blue/5 rounded-full blur-3xl group-hover:bg-tiffany-blue/10 transition-colors duration-500" />
+                <div 
+                  className="absolute top-0 right-0 w-64 h-64 rounded-full blur-3xl transition-colors duration-500"
+                  style={{ 
+                    backgroundColor: study.glowColor.replace('0.1', '0.05'),
+                    '--hover-bg': study.glowColor.replace('0.1', '0.1')
+                  } as React.CSSProperties}
+                />
               </div>
             </motion.div>
           ))}
