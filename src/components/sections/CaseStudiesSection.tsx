@@ -12,7 +12,7 @@ const caseStudies = [
   },
   {
     project: 'ITALIANOBRAIN',
-    metric: '$360K Market Cap',
+    metric: '$611K Market Cap',
     description: 'Provided comprehensive support for this Solana-based token, including listing advisory, community building, and organic content strategies.',
     tags: ['Token Listing', 'Community Building', 'Content Strategy']
   },

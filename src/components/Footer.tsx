@@ -41,10 +41,7 @@ export default function Footer() {
             <h2 className="text-5xl md:text-6xl font-satoshi font-black text-quantum-white mb-6">
               Ready to build?
             </h2>
-            <p className="text-xl text-neutral-gray mb-8">
-              Let&apos;s architect your Web3 success story together. 
-              Book a call with our growth experts today.
-            </p>
+
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

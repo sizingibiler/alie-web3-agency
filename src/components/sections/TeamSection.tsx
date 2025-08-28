@@ -41,9 +41,7 @@ export default function TeamSection() {
           <h2 className="text-4xl md:text-5xl font-satoshi font-black text-quantum-white mb-6">
             Meet the Team
           </h2>
-          <p className="text-xl text-neutral-gray max-w-3xl mx-auto">
-            Our talented team of professionals is dedicated to driving success and innovation
-          </p>
+
         </motion.div>
 
         <motion.div

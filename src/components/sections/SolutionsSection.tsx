@@ -53,9 +53,7 @@ export default function SolutionsSection() {
           <h2 className="text-4xl md:text-5xl font-satoshi font-black text-quantum-white mb-6">
             The Alie Ecosystem
           </h2>
-          <p className="text-xl text-neutral-gray max-w-3xl mx-auto">
-            An interconnected growth engine designed to amplify every aspect of your Web3 presence
-          </p>
+
         </motion.div>
 
         {/* Network Diagram */}
