@@ -140,7 +140,7 @@ export default function SolutionsSection() {
                     cx={node.x}
                     cy={node.y}
                     r={isCenter ? 8 : 5}
-                    fill={isCenter ? (logoLoaded ? 'url(#centerLogo)' : '#FFB600') : '#009EFF'}
+                    fill={isCenter ? (logoLoaded ? 'url(#centerLogo)' : '#FFB600') : '#FFFFFF'}
                     stroke={isHovered || isConnected ? '#FFB600' : '#CCCCCC'}
                     strokeWidth={2}
                     initial={{ scale: 0 }}
@@ -167,7 +167,7 @@ export default function SolutionsSection() {
                       cy={node.y}
                       r={isCenter ? 12 : 8}
                       fill="none"
-                      stroke={isCenter ? '#FFB600' : '#009EFF'}
+                      stroke={isCenter ? '#FFB600' : '#FFFFFF'}
                       strokeOpacity={0.3}
                       strokeWidth={1}
                       initial={{ scale: 0.8, opacity: 0 }}
