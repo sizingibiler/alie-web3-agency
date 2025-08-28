@@ -54,11 +54,11 @@
   }
 
   .glow-blue {
-    box-shadow: 0 0 15px rgba(0, 158, 255, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-signal-gold to-data-blue bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-signal-gold to-quantum-white bg-clip-text text-transparent;
   }
 
   .glass-effect {
