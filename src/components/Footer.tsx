@@ -42,21 +42,37 @@ export default function Footer() {
               Ready to build?
             </h2>
 
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <a
-                href="https://linktr.ee/alienetwork"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-6 md:px-8 py-3 md:py-4 bg-[#00FF88] text-black font-semibold rounded-full 
-                          hover:bg-opacity-90 transition-all duration-300 
-                          shadow-lg shadow-[#00FF88]/20 hover:shadow-[#00FF88]/40"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Book a Call
-              </a>
-            </motion.div>
+                <a
+                  href="https://linktr.ee/alienetwork"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-6 md:px-8 py-3 md:py-4 bg-[#00FF88] text-black font-semibold rounded-full 
+                            hover:bg-opacity-90 transition-all duration-300 
+                            shadow-lg shadow-[#00FF88]/20 hover:shadow-[#00FF88]/40"
+                >
+                  Book a Call
+                </a>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <a
+                  href="https://forms.gle/k8KYD9QfkNkioRY77"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-6 md:px-8 py-3 md:py-4 border-2 border-[#00AAFF] text-[#00AAFF] font-semibold rounded-full 
+                            hover:bg-[#00AAFF] hover:text-black transition-all duration-300"
+                >
+                  💬 Share Feedback
+                </a>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>

@@ -187,15 +187,26 @@ const InsightsSection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.6 }}
         >
-          <a 
-            href="https://medium.com/@alienetwork"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-6 md:px-8 py-3 bg-[#00FF88] text-black font-bold rounded-lg 
-                     hover:bg-opacity-90 hover:scale-105 transition-all duration-300 
-                     shadow-lg shadow-[#00FF88]/20 hover:shadow-[#00FF88]/40">
-            View All Articles on Medium
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a 
+              href="https://medium.com/@alienetwork"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 md:px-8 py-3 bg-[#00FF88] text-black font-bold rounded-lg 
+                       hover:bg-opacity-90 hover:scale-105 transition-all duration-300 
+                       shadow-lg shadow-[#00FF88]/20 hover:shadow-[#00FF88]/40">
+              View All Articles on Medium
+            </a>
+            <a 
+              href="https://forms.gle/k8KYD9QfkNkioRY77"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 border-2 border-[#00AAFF] text-[#00AAFF] font-bold rounded-lg 
+                       hover:bg-[#00AAFF] hover:text-black hover:scale-105 transition-all duration-300"
+            >
+              💬 Give Us Feedback
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>

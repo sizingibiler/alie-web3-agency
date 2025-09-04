@@ -4,6 +4,7 @@ import TechnologySection from '@/components/sections/TechnologySection'
 import PartnersSection from '@/components/sections/PartnersSection'
 import TeamSection from '@/components/sections/TeamSection'
 import InsightsSection from '@/components/sections/InsightsSection'
+import FloatingFeedbackButton from '@/components/FloatingFeedbackButton'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <TechnologySection />
       <TeamSection />
       <InsightsSection />
+      <FloatingFeedbackButton />
     </>
   )
 }
