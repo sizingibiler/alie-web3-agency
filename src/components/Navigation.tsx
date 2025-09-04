@@ -21,7 +21,8 @@ export default function Navigation() {
 
   const navLinks = [
     { href: '#services', label: 'Services' },
-    { href: '#case-studies', label: 'Case Studies' },
+    { href: '#technology', label: 'Technology' },
+    { href: '#insights', label: 'Insights' },
     { href: '#team', label: 'Team' },
     { href: '#contact', label: 'Contact' }
   ]
@@ -66,11 +67,11 @@ export default function Navigation() {
                     const element = document.querySelector(link.href)
                     element?.scrollIntoView({ behavior: 'smooth' })
                   }}
-                  className="relative font-inter font-medium text-neutral-gray hover:text-quantum-white transition-colors duration-200 group cursor-pointer"
+                className="relative font-inter font-medium text-[#A1A1A1] hover:text-white transition-colors duration-200 group cursor-pointer"
                 >
                   {link.label}
                   <motion.span
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-tiffany-blue origin-center"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#00FF88] origin-center"
                     initial={{ scaleX: 0 }}
                     whileHover={{ scaleX: 1 }}
                     transition={{ duration: 0.2 }}
@@ -87,7 +88,7 @@ export default function Navigation() {
                   href="https://linktr.ee/alienetwork"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3 bg-tiffany-blue text-void-black font-semibold rounded-full hover:glow transition-all duration-200"
+                  className="px-6 py-3 bg-[#00FF88] text-black font-semibold rounded-full hover:bg-opacity-90 hover:scale-105 transition-all duration-300 shadow-lg shadow-[#00FF88]/20 hover:shadow-[#00FF88]/40"
                 >
                   Get Started
                 </a>
@@ -101,15 +102,15 @@ export default function Navigation() {
             >
               <motion.span
                 animate={{ rotate: isMenuOpen ? 45 : 0, y: isMenuOpen ? 6 : 0 }}
-                className="w-6 h-0.5 bg-quantum-white block"
+                className="w-6 h-0.5 bg-white block"
               />
               <motion.span
                 animate={{ opacity: isMenuOpen ? 0 : 1 }}
-                className="w-6 h-0.5 bg-quantum-white block"
+                className="w-6 h-0.5 bg-white block"
               />
               <motion.span
                 animate={{ rotate: isMenuOpen ? -45 : 0, y: isMenuOpen ? -6 : 0 }}
-                className="w-6 h-0.5 bg-quantum-white block"
+                className="w-6 h-0.5 bg-white block"
               />
             </button>
           </div>

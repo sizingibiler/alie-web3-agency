@@ -15,13 +15,13 @@ const footerLinks = {
   ],
   company: [
     { label: 'About', href: '#' },
-    { label: 'Team', href: '#' },
+    { label: 'Team', href: '#team' },
     { label: 'Careers', href: '#' },
     { label: 'Blog', href: '#' }
   ],
   legal: [
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms of Service', href: '#' }
+    { label: 'Privacy Policy', href: '/privacy-policy' },
+    { label: 'Terms of Service', href: '/terms-of-service' }
   ]
 }
 
@@ -38,7 +38,7 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-5xl md:text-6xl font-satoshi font-black text-quantum-white mb-6">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-satoshi font-black text-white mb-6">
               Ready to build?
             </h2>
 
@@ -50,7 +50,9 @@ export default function Footer() {
                 href="https://linktr.ee/alienetwork"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-8 py-4 bg-tiffany-blue text-void-black font-semibold rounded-full hover:glow transition-all duration-200"
+                className="inline-block px-6 md:px-8 py-3 md:py-4 bg-[#00FF88] text-black font-semibold rounded-full 
+                          hover:bg-opacity-90 transition-all duration-300 
+                          shadow-lg shadow-[#00FF88]/20 hover:shadow-[#00FF88]/40"
               >
                 Book a Call
               </a>
@@ -79,7 +81,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
-                  className="w-10 h-10 rounded-full bg-neutral-gray/10 flex items-center justify-center text-neutral-gray hover:bg-tiffany-blue hover:text-void-black transition-all duration-200"
+                  className="w-10 h-10 rounded-full bg-[#A1A1A1]/10 flex items-center justify-center text-[#A1A1A1] hover:bg-[#00FF88] hover:text-black transition-all duration-200"
                 >
                   <Twitter className="w-5 h-5" />
                 </motion.a>
@@ -88,7 +90,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
-                  className="w-10 h-10 rounded-full bg-neutral-gray/10 flex items-center justify-center text-neutral-gray hover:bg-tiffany-blue hover:text-void-black transition-all duration-200"
+                  className="w-10 h-10 rounded-full bg-[#A1A1A1]/10 flex items-center justify-center text-[#A1A1A1] hover:bg-[#00FF88] hover:text-black transition-all duration-200"
                 >
                   <LinkIcon className="w-5 h-5" />
                 </motion.a>
@@ -97,7 +99,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
-                  className="w-10 h-10 rounded-full bg-neutral-gray/10 flex items-center justify-center text-neutral-gray hover:bg-tiffany-blue hover:text-void-black transition-all duration-200"
+                  className="w-10 h-10 rounded-full bg-[#A1A1A1]/10 flex items-center justify-center text-[#A1A1A1] hover:bg-[#00FF88] hover:text-black transition-all duration-200"
                 >
                   <Send className="w-5 h-5" />
                 </motion.a>

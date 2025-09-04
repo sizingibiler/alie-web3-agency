@@ -1,0 +1,80 @@
+{
+  "//": "Alie Network - Professional Design System. Vibe: Tech-focused, intelligent, trustworthy, modern.",
+  "colors": {
+    "background": "#0A0A0A",
+    "primary": "#00FF88",
+    "secondary": "#00AAFF",
+    "text": "#EAEAEA",
+    "textSecondary": "#A1A1A1",
+    "border": "#27272A",
+    "cardBg": "rgba(20, 20, 20, 0.5)",
+    "gradientStart": "#00FF88",
+    "gradientEnd": "#00AAFF"
+  },
+  "typography": {
+    "fontFamily": {
+      "headings": "'Sora', sans-serif",
+      "body": "'Inter', sans-serif",
+      "mono": "'JetBrains Mono', monospace"
+    },
+    "fontSizes": {
+      "h1": "4.5rem",
+      "h2": "3rem",
+      "h3": "1.875rem",
+      "h4": "1.5rem",
+      "p": "1rem",
+      "small": "0.875rem",
+      "xs": "0.75rem"
+    },
+    "fontWeights": {
+      "bold": 700,
+      "semibold": 600,
+      "medium": 500,
+      "regular": 400,
+      "light": 300
+    },
+    "lineHeights": {
+      "tight": "1.2",
+      "normal": "1.5",
+      "relaxed": "1.75"
+    }
+  },
+  "components": {
+    "button": {
+      "borderRadius": "0.5rem",
+      "padding": "0.75rem 1.5rem",
+      "transition": "all 0.3s ease",
+      "hoverScale": "1.05"
+    },
+    "card": {
+      "backgroundColor": "rgba(20, 20, 20, 0.5)",
+      "borderRadius": "1rem",
+      "border": "1px solid #27272A",
+      "padding": "2rem",
+      "boxShadow": "0 4px 6px rgba(0, 0, 0, 0.1)",
+      "backdropFilter": "blur(10px)"
+    },
+    "section": {
+      "paddingY": "6rem",
+      "paddingX": "1.5rem"
+    }
+  },
+  "layout": {
+    "containerMaxWidth": "1280px",
+    "gridGap": "1.5rem",
+    "sectionPadding": "6rem 1.5rem",
+    "navHeight": "5rem"
+  },
+  "animations": {
+    "duration": {
+      "fast": "0.2s",
+      "normal": "0.3s",
+      "slow": "0.5s"
+    },
+    "easing": {
+      "default": "ease",
+      "bounce": "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+      "smooth": "cubic-bezier(0.4, 0, 0.2, 1)"
+    }
+  }
+}

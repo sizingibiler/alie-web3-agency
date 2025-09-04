@@ -29,16 +29,16 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <section id="team" className="py-32">
-      <div className="container mx-auto px-6 lg:px-8">
+    <section id="team" className="py-16 md:py-24 lg:py-32">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-satoshi font-black text-quantum-white mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-satoshi font-black text-white mb-4 md:mb-6">
             Meet the Team
           </h2>
 
@@ -53,23 +53,23 @@ export default function TeamSection() {
           {teamMembers.map((member, index) => (
             <motion.div
               key={index}
-              className="group flex flex-col items-center bg-void-black p-6 rounded-lg border border-neutral-gray/20 hover:border-tiffany-blue/50 transition-all duration-300"
+              className="group flex flex-col items-center bg-[#141414]/50 p-6 rounded-lg border border-[#27272A] hover:border-[#00FF88]/50 transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <motion.div className="relative w-36 h-36 mb-4 overflow-hidden rounded-full border-4 border-tiffany-blue">
+              <motion.div className="relative w-32 h-32 md:w-36 md:h-36 mb-4 overflow-hidden rounded-full border-4 border-[#00FF88]">
                 <motion.img
                   src={member.image}
                   alt={member.name}
                   className="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-300"
                 />
               </motion.div>
-              <h3 className="text-xl font-satoshi font-bold text-quantum-white mb-2">
+              <h3 className="text-lg md:text-xl font-satoshi font-bold text-white mb-2">
                 {member.name}
               </h3>
-              <p className="text-neutral-gray mb-4">
+              <p className="text-[#A1A1A1] mb-4 text-sm md:text-base">
                 {member.title}
               </p>
               <div className="flex gap-4">
@@ -78,7 +78,7 @@ export default function TeamSection() {
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-tiffany-blue/70 hover:text-tiffany-blue transition-colors duration-200"
+                    className="text-[#00AAFF]/70 hover:text-[#00AAFF] transition-colors duration-200"
                   >
                     LinkedIn
                   </a>
@@ -88,7 +88,7 @@ export default function TeamSection() {
                     href={member.telegram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-tiffany-blue/70 hover:text-tiffany-blue transition-colors duration-200"
+                    className="flex items-center gap-1 text-[#00AAFF]/70 hover:text-[#00AAFF] transition-colors duration-200"
                   >
                     <Send className="w-4 h-4" />
                     Telegram

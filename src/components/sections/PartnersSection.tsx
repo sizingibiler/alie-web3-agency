@@ -25,14 +25,14 @@ const partners = [
 
 export default function PartnersSection() {
   return (
-    <section className="py-20 overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-20 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-2xl md:text-3xl font-satoshi font-bold text-center text-quantum-white mb-12"
+          className="text-xl sm:text-2xl md:text-3xl font-satoshi font-bold text-center text-white mb-8 md:mb-12"
         >
           Trusted By The Industry&apos;s Best
         </motion.h2>
