@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import IntelligenceOrb from '../IntelligenceOrb';
+import { trackEvent } from '@/lib/gtm';
+// import IntelligenceOrb from '../IntelligenceOrb'; // Unused
 import dynamic from 'next/dynamic';
 
 const VideoSphere3D = dynamic(() => import('../VideoSphere3D'), { ssr: false });
@@ -73,6 +74,7 @@ const HeroSection = () => {
           >
             <a 
               href="#services"
+              onClick={() => trackEvent.buttonClick('explore_services', 'hero')}
               className="inline-block bg-[#00FF88] text-black font-bold py-2 px-5 sm:py-2.5 sm:px-6 md:py-3 md:px-8 rounded-lg text-sm md:text-base
                          hover:bg-opacity-90 hover:scale-105 transition-all duration-300 
                          shadow-lg shadow-[#00FF88]/20 hover:shadow-[#00FF88]/40"
@@ -83,6 +85,11 @@ const HeroSection = () => {
               href="https://linktr.ee/alienetwork"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => {
+                trackEvent.buttonClick('schedule_call', 'hero');
+                trackEvent.contactRequest('linktr.ee', 'hero');
+                trackEvent.outboundLink('https://linktr.ee/alienetwork', 'Schedule a Call');
+              }}
               className="inline-block border-2 border-[#00FF88] text-[#00FF88] font-bold py-2 px-5 sm:py-2.5 sm:px-6 md:py-3 md:px-8 rounded-lg text-sm md:text-base
                          hover:bg-[#00FF88] hover:text-black hover:scale-105 
                          transition-all duration-300"

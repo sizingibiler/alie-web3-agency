@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Rocket, TrendingUp, BarChart3, Zap, Users, Shield } from 'lucide-react';
+import { Rocket, TrendingUp, BarChart3, Zap } from 'lucide-react';
+import { trackEvent } from '@/lib/gtm';
 
 const services = [
   {
@@ -162,6 +163,10 @@ const ServicesSection = () => {
                     href="https://linktr.ee/alienetwork"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => {
+                      trackEvent.serviceInterest(service.title, 'learn_more_click');
+                      trackEvent.outboundLink('https://linktr.ee/alienetwork', service.title);
+                    }}
                     className="mt-auto block w-full min-h-[48px] py-3 md:py-3.5 rounded-lg border border-[#00FF88]/50 
                              text-[#00FF88] text-base font-semibold text-center
                              hover:bg-[#00FF88] hover:text-black 

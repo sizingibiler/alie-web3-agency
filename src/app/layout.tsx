@@ -3,6 +3,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { organizationSchema, websiteSchema, softwareApplicationSchema, sagaApplicationSchema, xAnalyzerSchema, servicesSchema, faqSchema } from "@/components/SEO";
+import { GoogleTagManager, GoogleTagManagerNoscript } from "@/components/GoogleTagManager";
 
 export const metadata: Metadata = {
   title: "Alie Network — Data-Driven Web3 Intelligence (S.A.G.A. • Phoenix Engine)",
@@ -105,12 +106,14 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <GoogleTagManager />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
         />
       </head>
       <body className="antialiased">
+        <GoogleTagManagerNoscript />
         <Navigation />
         <main>{children}</main>
         <Footer />

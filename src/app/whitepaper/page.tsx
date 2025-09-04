@@ -4,15 +4,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowLeft, Download, FileText, BarChart3, Users, Target } from 'lucide-react';
+import { trackEvent } from '@/lib/gtm';
 
 export default function WhitepaperPage() {
   const handleDownload = (type: 'whitepaper' | 'onepager') => {
-    // Track download with GA4 if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'download', {
-        'file_name': type === 'whitepaper' ? 'whitepaper_v1.2' : 'onepager_v1.0'
-      });
-    }
+    // Track download with GTM
+    trackEvent.fileDownload(
+      type === 'whitepaper' ? 'whitepaper_v1.2' : 'onepager_v1.0',
+      type === 'whitepaper' ? 'pdf' : 'pdf'
+    );
+    trackEvent.whitepaperEngagement('download', type);
   };
 
   return (
