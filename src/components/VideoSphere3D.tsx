@@ -105,7 +105,7 @@ function VideoSphereContent() {
   // Compute a scale so the outermost ring fits within the current viewport
   // Outer radius ~1.3; we keep a margin (fit factor) to avoid touching edges
   const maxRadius = 1.3; // must match largest torus radius
-  const fitFactor = 0.9; // 90% of available min dimension
+  const fitFactor = 0.85; // add more margin on mobile to avoid touching edges
   const scale = Math.min(viewport.width, viewport.height) / (maxRadius * 2) * fitFactor;
 
   useFrame((state, delta) => {

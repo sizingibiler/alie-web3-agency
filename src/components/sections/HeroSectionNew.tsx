@@ -11,14 +11,14 @@ const HeroSection = () => {
   return (
     <section 
       id="hero" 
-      className="relative w-full h-screen max-h-[900px] flex items-center justify-center overflow-hidden"
+      className="relative w-full min-h-[100svh] max-h-[900px] flex items-center justify-center overflow-hidden"
       style={{ backgroundColor: '#0A0A0A' }}
     >
       {/* 3D Background - Disabled to avoid conflicts with VideoSphere */}
       {/* <IntelligenceOrb /> */}
 
       {/* Content */}
-      <div className="container mx-auto px-4 py-8 lg:py-0 h-full flex items-center">
+      <div className="container mx-auto px-4 pt-20 pb-8 lg:py-0 h-full flex items-center">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-8 w-full">
           
           {/* Left Side: Text and Buttons */}
@@ -29,7 +29,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
         >
             <motion.h1 
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-1"
+              className="font-bold text-white mb-1 leading-[1.1] text-[clamp(1.75rem,6.2vw,3.5rem)]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
@@ -37,7 +37,7 @@ const HeroSection = () => {
               Stop Guessing.
             </motion.h1>
             <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-4"
+              className="font-bold mb-3 md:mb-4 leading-[1.1] text-[clamp(1.75rem,6.2vw,3.5rem)]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
@@ -46,7 +46,7 @@ const HeroSection = () => {
             </motion.h1>
           
             <motion.h2
-              className="text-lg sm:text-xl md:text-2xl font-light text-[#00FF88] mb-3 md:mb-4"
+              className="font-light text-[#00FF88] mb-3 md:mb-4 text-[clamp(1rem,3.8vw,1.5rem)]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
@@ -55,7 +55,7 @@ const HeroSection = () => {
             </motion.h2>
             
             <motion.p 
-              className="text-sm md:text-base lg:text-lg text-[#A1A1A1] max-w-lg mx-auto lg:mx-0 mb-4 md:mb-6 px-4 lg:px-0"
+              className="text-[#A1A1A1] max-w-lg mx-auto lg:mx-0 mb-4 md:mb-6 px-4 lg:px-0 text-[clamp(0.95rem,3.2vw,1.125rem)] leading-relaxed"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
@@ -66,14 +66,14 @@ const HeroSection = () => {
           </motion.p>
           
           <motion.div 
-            className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4"
+            className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
           >
             <a 
               href="#services"
-              className="inline-block bg-[#00FF88] text-black font-bold py-2.5 px-6 md:py-3 md:px-8 rounded-lg text-sm md:text-base
+              className="inline-block bg-[#00FF88] text-black font-bold py-2 px-5 sm:py-2.5 sm:px-6 md:py-3 md:px-8 rounded-lg text-sm md:text-base
                          hover:bg-opacity-90 hover:scale-105 transition-all duration-300 
                          shadow-lg shadow-[#00FF88]/20 hover:shadow-[#00FF88]/40"
             >
@@ -83,7 +83,7 @@ const HeroSection = () => {
               href="https://linktr.ee/alienetwork"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block border-2 border-[#00FF88] text-[#00FF88] font-bold py-2.5 px-6 md:py-3 md:px-8 rounded-lg text-sm md:text-base
+              className="inline-block border-2 border-[#00FF88] text-[#00FF88] font-bold py-2 px-5 sm:py-2.5 sm:px-6 md:py-3 md:px-8 rounded-lg text-sm md:text-base
                          hover:bg-[#00FF88] hover:text-black hover:scale-105 
                          transition-all duration-300"
             >
@@ -94,7 +94,7 @@ const HeroSection = () => {
 
           {/* Right Side: 3D Video Sphere - Properly sized */}
           <div className="w-full lg:w-1/2 flex items-center justify-center mt-8 lg:mt-0">
-            <div className="relative w-full max-w-[360px] sm:max-w-[400px] md:max-w-[460px] lg:max-w-[520px] aspect-square">
+            <div className="relative w-full max-w-[320px] sm:max-w-[380px] md:max-w-[460px] lg:max-w-[520px] aspect-square">
               <VideoSphere3D />
             </div>
           </div>
