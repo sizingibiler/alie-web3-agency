@@ -8,10 +8,21 @@ interface GTMEvent {
   [key: string]: any;
 }
 
-// Push event to dataLayer
+// Push event to dataLayer (works for both GTM and gtag)
 export const pushToDataLayer = (event: GTMEvent) => {
-  if (typeof window !== 'undefined' && window.dataLayer) {
-    window.dataLayer.push(event);
+  if (typeof window !== 'undefined') {
+    // Push to dataLayer for GTM
+    if (window.dataLayer) {
+      window.dataLayer.push(event);
+    }
+    
+    // Also send directly to GA4 if gtag is available
+    if (window.gtag && event.event) {
+      window.gtag('event', event.event, {
+        ...event,
+        send_to: 'G-RBSKVLSREW'
+      });
+    }
   }
 };
 
@@ -138,9 +149,10 @@ export const ecommerceEvent = {
   },
 };
 
-// Extend Window interface to include dataLayer
+// Extend Window interface to include dataLayer and gtag
 declare global {
   interface Window {
     dataLayer: any[];
+    gtag?: (...args: any[]) => void;
   }
 }
