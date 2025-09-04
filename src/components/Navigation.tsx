@@ -22,6 +22,7 @@ export default function Navigation() {
   const navLinks = [
     { href: '#services', label: 'Services' },
     { href: '#technology', label: 'Technology' },
+    { href: '/whitepaper', label: 'Whitepaper' },
     { href: '#insights', label: 'Insights' },
     { href: '#team', label: 'Team' },
     { href: '#contact', label: 'Contact' }
@@ -58,26 +59,43 @@ export default function Navigation() {
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
-{navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={(e) => {
-                    e.preventDefault()
-                    const element = document.querySelector(link.href)
-                    element?.scrollIntoView({ behavior: 'smooth' })
-                  }}
-                className="relative font-inter font-medium text-[#A1A1A1] hover:text-white transition-colors duration-200 group cursor-pointer"
-                >
-                  {link.label}
-                  <motion.span
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#00FF88] origin-center"
-                    initial={{ scaleX: 0 }}
-                    whileHover={{ scaleX: 1 }}
-                    transition={{ duration: 0.2 }}
-                  />
-                </Link>
-))}
+{navLinks.map((link) => {
+                const isExternal = link.href.startsWith('/');
+                return isExternal ? (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="relative font-inter font-medium text-[#A1A1A1] hover:text-white transition-colors duration-200 group cursor-pointer"
+                  >
+                    {link.label}
+                    <motion.span
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#00FF88] origin-center"
+                      initial={{ scaleX: 0 }}
+                      whileHover={{ scaleX: 1 }}
+                      transition={{ duration: 0.2 }}
+                    />
+                  </Link>
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={(e) => {
+                      e.preventDefault()
+                      const element = document.querySelector(link.href)
+                      element?.scrollIntoView({ behavior: 'smooth' })
+                    }}
+                    className="relative font-inter font-medium text-[#A1A1A1] hover:text-white transition-colors duration-200 group cursor-pointer"
+                  >
+                    {link.label}
+                    <motion.span
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#00FF88] origin-center"
+                      initial={{ scaleX: 0 }}
+                      whileHover={{ scaleX: 1 }}
+                      transition={{ duration: 0.2 }}
+                    />
+                  </Link>
+                );
+              })}
               
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -134,21 +152,33 @@ export default function Navigation() {
               className="absolute right-0 top-0 bottom-0 w-full max-w-sm bg-void-black/95 backdrop-blur-lg border-l border-neutral-gray/20"
             >
               <div className="flex flex-col p-8 pt-24 space-y-6">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={(e) => {
-                      e.preventDefault()
-                      setIsMenuOpen(false)
-                      const element = document.querySelector(link.href)
-                      element?.scrollIntoView({ behavior: 'smooth' })
-                    }}
-                    className="text-2xl font-inter font-medium text-neutral-gray hover:text-quantum-white transition-colors cursor-pointer"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+                {navLinks.map((link) => {
+                  const isExternal = link.href.startsWith('/');
+                  return isExternal ? (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setIsMenuOpen(false)}
+                      className="text-2xl font-inter font-medium text-neutral-gray hover:text-quantum-white transition-colors cursor-pointer"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={(e) => {
+                        e.preventDefault()
+                        setIsMenuOpen(false)
+                        const element = document.querySelector(link.href)
+                        element?.scrollIntoView({ behavior: 'smooth' })
+                      }}
+                      className="text-2xl font-inter font-medium text-neutral-gray hover:text-quantum-white transition-colors cursor-pointer"
+                    >
+                      {link.label}
+                    </Link>
+                  );
+                })}
                 <a
                   href="https://linktr.ee/alienetwork"
                   target="_blank"
